@@ -1,0 +1,66 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header{
+  min-width: 547px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 40px 4%;
+  background-color: var(--second-color);
+  .card-app-name span{
+      font-size: var(--h1-font-size);
+      color: #ea1;
+      cursor: pointer;
+      sup{
+        font-size: var(--h2-font-size);
+        color: var(--first-color);
+        cursor: pointer;
+      }
+    }
+}
+.conteiner{
+  display: flex;
+  flex-direction: row;
+  padding: 40px 4%;
+  justify-content: space-between;
+}
+
+.taskPro-design{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  max-width: 850px;
+  
+  .conteiner-img-taskpro{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    background-image: linear-gradient(var(--border-color),var(--border-color),var(--border-color));
+    border-radius: 5px;
+    h1{
+      font-size:75px;
+     color: #9e9e9e;
+     font-family: 'Times New Roman', Times, serif;
+    }
+  }
+}
+@media screen and (max-width:568px) {
+  .conteiner{
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5%;
+  }
+  .taskPro-design{
+    display: none;
+  }
+}

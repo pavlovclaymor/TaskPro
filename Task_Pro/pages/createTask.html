@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/icon/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/createTask.css">
+    <script src="../assets/js/appDataUserOnline.js"></script>
+  </head>
+  <body onload="OffLine(),DataHomePageUserOnline()">
+   <script>
+     function OffLine(){
+      const TaskProBd = JSON.parse(localStorage.getItem('TaskProBd'))
+      if (TaskProBd.online == null || TaskProBd.online == '' ) {
+        window.location.href = 'SignIn/SignIn.html'
+      }
+     }
+   </script>
+    <header>
+      <div class="card-app-name">
+        <span>Task<sup>Pro</sup></span>
+      </div>
+      <nav>
+        <ul class="icons-user">
+          <li><i class="bi bi-bell"></i></li>
+          <li><i class="bi bi-person-fill"></i></li>
+        </ul>
+        
+      </nav>
+    </header>
+
+      <section class="conteiner">
+        <article class="content-task">
+          <form action="">
+            <label for="">Titulo</label>
+            <input type="text"
+            placeholder="Ex:Acordar cedo"
+            id="title"
+            />
+            <label for="">Descrição</label>
+            <textarea name="" id="description" placeholder="EX:de segunda a segunda acordar as 7:00"></textarea>
+
+            <button type="button" onclick="CreateTask()">Criar Tarefa</button>
+          </form>
+        </article>
+
+        <section class="section-content-profile">
+
+          <div class="backgrond-profile ">
+
+          </div>
+          <div class="content-profile ">
+
+              <div class="card-img-name-email anime-bottom">
+                  <div class="card-img-profile">
+                      <div class="img-profile-user-online">RB</div>
+                  </div>
+                  <div class="card-name-email">
+                      <strong>
+                          <span class="first-user-online">fisrt name</span> 
+                          <span class="last-user-online">last name</span>
+                      </strong>
+                      <small class="email-user-online">email user</small>
+                  </div>
+              </div>
+
+
+              <ul class="list-skills ">
+                 
+                 
+                  <li>
+                      <strong class="count-post-user-online">0</strong>
+                      <small>Tarefas</small>
+                  </li>
+
+                  
+              </ul>
+
+              <a href="#" download="MeuCV" class="button-download-cv">
+                  <span>Ir Para o Perfil</span>
+                  <i class="bi bi-cloud-download"></i>
+              </a>
+
+              
+          </div>
+
+      </section>
+      </section>
+
+      <script src="../assets/js/appCreateTask.js"></script>
+  </body>
+</html>

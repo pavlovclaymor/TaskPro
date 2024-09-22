@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../../assets/icon/bootstrap-icons.css">
+  <script src="admin.js"></script>
+</head>
+<body onload="ShowDataAdminHomePage()">
+  <header>
+    <div class="card-app-name">
+      <span>Task<sup>Pro</sup></span>
+    </div>
+  </header>
+  <section class="conteiner">
+    <div class="card-admin-information">
+      <div class="card-img-admin">
+          <span id="sort-name">RT</span>
+      </div>
+      <div class="conteiner-itens">
+        <div class="content">
+          <span class="conteiner-email"><i class="bi bi-envelope"></i>exemplo@gmail.com</span>
+          <span class="full-name"><i class="bi bi-person-fill"></i>Aguinaldo</span>
+        <span class="id-admin">identificação:#1114</span>
+        </div>
+        <div class="itens">
+          <div class="perfil-admin">
+            <div class="back-color"> <i class="bi bi-brush-fill"></i></div>
+           
+          </div>
+          <div class="users-information">
+            <div class="back-color">
+              <i class="bi bi-journal-text"></i>
+            </div>
+           
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article class="update-admin">
+      <form action="" class="form">
+        <label for="">Nome</label>
+        <input type="text"
+        placeholder="ex:Aguinaldo Funje"
+        id="input-name"
+        />
+
+        <label for="">Email</label>
+        <input type="text"
+        placeholder="ex:aguinaldo1114funje@gmail.com"
+        id="input-email"
+        />
+
+        <label for="">Password</label>
+        <input type="text"
+        placeholder="ex:$wentAguinaldo1114@"
+        id="input-password"
+        />
+
+        <button type="button" onclick="Update()">Actualizar</button>
+      </form>
+    </article>
+  </section>
+</body>
+</html>

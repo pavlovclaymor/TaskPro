@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/icon/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/home.js"></script>
+  </head>
+  <body onload="DataHomePage(),DashBord(),OffLine()">
+    <script>
+      function OffLine(){
+       const TaskProBd = JSON.parse(localStorage.getItem('TaskProBd'))
+       if (TaskProBd.online == null || TaskProBd.online == '' ) {
+         window.location.href = 'SignIn/SignIn.html'
+       }
+      }
+    </script>
+    <main class="conteiner">
+
+      <aside class="aside">
+        <div class="top">
+          <i class="bi bi-grid"></i>
+        </div>
+        <div class="footer">
+          <i class="bi bi-brightness-low-fill"></i>
+          <div class="card-user">
+            <a href="profile.html"><i class="bi bi-person-fill"></i></a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="content">
+        <header class="header">
+          <h1>Invoices <span>7</span> now</h1>
+          <div class="create-task">
+            <a href="./createTask.html"><span>Create task</span></a>
+            <i class="bi bi-plus-lg"></i>
+          </div>
+          
+        </header>
+
+        <ul class="list-task">
+         
+        </ul>
+      </article>
+    </main>
+  </body>
+</html>
